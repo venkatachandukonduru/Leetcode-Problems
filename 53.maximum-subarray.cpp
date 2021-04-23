@@ -15,6 +15,7 @@ public:
             sum+=x;
             max1 = max(sum,max1);
             if(sum<0)sum=0;
+            
 
         }
         return max1;
