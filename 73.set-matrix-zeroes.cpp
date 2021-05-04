@@ -11,6 +11,8 @@ public:
         // 
          int rows = matrix.size();
         int cols = matrix[0].size();
+        //Finding Row size and Column size
+        
         int rows1[rows];
         int cols1[cols];
         for(int i=0; i<rows;i++)rows1[i]=-1;
