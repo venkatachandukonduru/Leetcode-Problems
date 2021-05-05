@@ -14,10 +14,14 @@ public:
         for(int i:nums)
         {
             v1[i]++;
-            if(v1[i]>count){arr.push_back(i);}
         }
-        sort(arr.begin(),arr.end());
-        arr.erase(unique(arr.begin(),arr.end()),arr.end());
+        for(auto i:v1)
+        {
+            //v1[i]++;
+            if(i.second>count){arr.push_back(i.first);}
+        }
+        //sort(arr.begin(),arr.end());
+        //arr.erase(unique(arr.begin(),arr.end()),arr.end());
         return arr;
     }
 };
