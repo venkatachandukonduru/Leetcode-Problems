@@ -1,3 +1,4 @@
+[Discussion Post (created on 10/4/2021 at 18:42)](https://leetcode.com/problems/top-k-frequent-elements/discuss/1201132/Beautiful-Solution(-Using-C%2B%2B-STL))  
 <h2>347. Top K Frequent Elements</h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k</code> <em>most frequent elements</em>. You may return the answer in <strong>any order</strong>.</p>
 
 <p>&nbsp;</p>
