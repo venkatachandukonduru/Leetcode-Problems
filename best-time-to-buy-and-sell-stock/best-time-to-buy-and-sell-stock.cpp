@@ -2,7 +2,6 @@ class Solution {
 public:
     int maxProfit(vector<int>& p) 
     {
-        //Kadane's Algorithm
         int res=0,sum=0;
         for(int i=1;i<p.size();i++)
         {
