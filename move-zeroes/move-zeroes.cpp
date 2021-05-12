@@ -4,7 +4,7 @@ public:
         int left =0;
         for(int i=0;i<arr.size();i++)
             if(arr[i]!=0)arr[left++]=arr[i];
-        for(int i=left;i<arr.size();i++)arr[i]=0;
+        while(left<arr.size())arr[left++]=0;
     }
 };
 /*
