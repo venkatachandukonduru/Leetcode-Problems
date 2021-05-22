@@ -1,3 +1,4 @@
+[Discussion Post (created on 22/4/2021 at 17:22)](https://leetcode.com/problems/n-th-tribonacci-number/discuss/1223424/5-line-Solution-%3AP)  
 <h2>1137. N-th Tribonacci Number</h2><h3>Easy</h3><hr><div><p>The Tribonacci sequence T<sub>n</sub> is defined as follows:&nbsp;</p>
 
 <p>T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, and T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub> for n &gt;= 0.</p>
