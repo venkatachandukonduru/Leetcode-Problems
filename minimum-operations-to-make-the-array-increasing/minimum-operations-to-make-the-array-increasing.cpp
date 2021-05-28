@@ -7,19 +7,13 @@ public:
         {
             int temp=0;
             if(nums[i]==nums[i-1])
-            {
-                nums[i]=(nums[i-1]+1);
-                    res++;
-            }
+                nums[i]=(nums[i-1]+1),res++;
             else if(nums[i]<nums[i-1]){
                 temp=abs(nums[i]-nums[i-1]);
                 res+=temp+1;
-                //if(nums[i]==0 or temp==0)nums[i]+=temp+1,res++;
-                //else 
-                    nums[i]+=temp+1;
-            }
-           
-        } for(auto i:nums)cout<<i<<" ";
+                nums[i]+=temp+1;
+            }  
+        }
         return res;
     }
 };
