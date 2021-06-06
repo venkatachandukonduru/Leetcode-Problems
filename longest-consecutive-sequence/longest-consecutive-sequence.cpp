@@ -1,5 +1,18 @@
 class Solution {
 public:
+    int longestConsecutive(vector<int> &num) {
+        unordered_map<int, int> m;
+        int r = 0;
+        for (int i : num) {
+            if (m[i]) continue;
+            r = max(r, m[i] = m[i + m[i + 1]] = m[i - m[i - 1]] = m[i + 1] + m[i - 1] + 1);
+        }
+        return r;
+    }
+};
+/*
+class Solution {
+public:
     int longestConsecutive(vector<int>& nums) {
         if(nums.size()==0)return 0;
         set<int> m1(nums.begin(),nums.end());
