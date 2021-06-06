@@ -2,6 +2,27 @@ class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
         if(nums.size()==0)return 0;
+        set<int> m1(nums.begin(),nums.end());
+        int res=1,tot=1;
+        auto i=m1.begin();
+        int temp=*i;
+        i++;
+        for(;i!=m1.end();i++)
+        {
+            if(*i-temp==1)res++;
+            else tot=max(tot,res),res=1;
+            temp=*i;
+        }
+        tot=max(tot,res);
+        return tot;
+        
+    }
+};
+/*
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        if(nums.size()==0)return 0;
         map<int,int> m1;
         for(auto i:nums)m1[i]++;
         auto temp = *min_element(nums.begin(),nums.end());
