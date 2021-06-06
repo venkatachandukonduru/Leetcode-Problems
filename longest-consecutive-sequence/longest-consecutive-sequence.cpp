@@ -1,16 +1,39 @@
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
+        if(nums.size()==0)return 0;
+        map<int,int> m1;
+        for(auto i:nums)m1[i]++;
+        auto temp = *min_element(nums.begin(),nums.end());
+        int res=1,tot=1;
+        auto i=m1.begin();
+        i++;
+        for(;i!=m1.end();i++)
+        {
+            if(i->first-temp==1)res++;
+            else tot=max(tot,res),res=1;
+            temp=i->first;
+        }
+        tot=max(tot,res);
+        return tot;
+        
+    }
+};
+/*class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
         set<int> s1(nums.begin(),nums.end());
         int y=0,best=0;
         for(auto x: s1)
         {
+            //This if condition is so important
             if(s1.find(x-1)==s1.end())
             {
                 y=x+1;
                 while(s1.find(y)!=s1.end())
                 {
                     y++;
+                    
                 }
                 best=max(best,y-x);
             }
