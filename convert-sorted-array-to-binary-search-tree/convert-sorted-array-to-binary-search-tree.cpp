@@ -21,8 +21,6 @@ public:
         return root;
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        int low = 0,high = nums.size()-1;
-        int mid = (low+high)/2;
-        return makebst(nums,low,high);
+        return makebst(nums,0,nums.size()-1);
     }
 };
