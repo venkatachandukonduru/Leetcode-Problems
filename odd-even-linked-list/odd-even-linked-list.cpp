@@ -10,7 +10,24 @@
  */
 class Solution {
 public:
-    ListNode* oddEvenList(ListNode* head) {
+    ListNode* oddEvenList(ListNode* head){
+        if(!head)return NULL;
+        ListNode *n1 = head;
+        ListNode *n2 = head->next;
+        ListNode *n3 = head->next;
+        while(n1->next and n2->next)
+        {
+            n1->next = n2->next;
+            n1=n2->next;
+            n2->next = n1->next;
+            n2=n1->next;
+        }
+        n1->next=n3;
+        return head;
+    }
+};
+/*
+ListNode* oddEvenList(ListNode* head) {
         ListNode *n1 = head;
         ListNode *n2 = head;
         vector<int> v1;
@@ -36,4 +53,4 @@ public:
         return head;
         
     }
-};
+*/
