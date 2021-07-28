@@ -1,6 +1,24 @@
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
+        string s;
+        sort(s1.begin(),s1.end());
+        for(int j=0;j<s2.size();j++){
+            if(j<s1.size()-1)s.push_back(s2[j]);
+            else{
+                s.push_back(s2[j]);
+                string temp =s;
+                sort(temp.begin(),temp.end());
+                if(temp==s1)return true;
+                s.erase(begin(s));
+            }
+        }
+        return false;
+    }
+};
+/*
+One way
+bool checkInclusion(string s1, string s2) {
         unordered_map<char,int>in_fre;
         if(s2.length()<s1.length())return false;
         for(auto i: s1)
@@ -32,6 +50,7 @@ public:
         return false;
     }
 };
+*/
 /*
 bool checkInclusion(string s1, string s2) {
         unordered_map<char,int>in_fre;
