@@ -4,19 +4,15 @@ public:
         int count = 0,iter = 0;
         vector<bool> seen(nums.size(),0);
         for(int i:nums){
-            seen[iter] = 1;
-            int index = i;
             int temp = 0;
-            while(index<nums.size()){
-                if(seen[index]==1)break;
+            while(seen[i]!=1){
                 temp++;
-                seen[index] = 1;     
-                index = nums[index];
+                seen[i] = 1;     
+                i = nums[i];
             }
             count=max(count,temp);
-            iter++;
             seen.clear();
         }
-        return count+1;
+        return count;
     }
 };
