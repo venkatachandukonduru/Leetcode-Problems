@@ -1,3 +1,4 @@
+[Discussion Post (created on 14/10/2021 at 12:48)](https://leetcode.com/problems/reverse-string/discuss/1577393/Using-Stack)  
 <h2>344. Reverse String</h2><h3>Easy</h3><hr><div><p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>
 
 <p>&nbsp;</p>
