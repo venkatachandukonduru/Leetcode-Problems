@@ -1,3 +1,4 @@
+[Discussion Post (created on 2/1/2022 at 21:58)](https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/1739762/Sliding-Window-or-Python-or-Simple)  
 <h2>438. Find All Anagrams in a String</h2><h3>Medium</h3><hr><div><p>Given two strings <code>s</code> and <code>p</code>, return <em>an array of all the start indices of </em><code>p</code><em>'s anagrams in </em><code>s</code>. You may return the answer in <strong>any order</strong>.</p>
 
 <p>&nbsp;</p>
