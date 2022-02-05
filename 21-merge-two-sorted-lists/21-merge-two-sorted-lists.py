@@ -4,7 +4,13 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, a, b):
+        if a and b:
+            if a.val>=b.val:
+                a,b = b,a
+            a.next = self.mergeTwoLists(a.next,b)
+        return a or b
+        '''
         curr = ListNode(None)
         dum = curr
         while list1 and list2:
@@ -25,4 +31,5 @@ class Solution:
             list2 = list2.next
             curr = curr.next
         return dum.next
+        '''
         
