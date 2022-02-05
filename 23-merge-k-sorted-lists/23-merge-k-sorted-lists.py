@@ -5,6 +5,12 @@
 #         self.next = next
 class Solution:
     def mergelists(self,list1,list2):
+        if a and b:
+            if a.val>=b.val:
+                a,b = b,a
+            a.next = self.mergelists(a.next,b)
+        return a or b
+    def mergelists(self,list1,list2):
         curr = ListNode(None)
         dum = curr
         while list1 and list2:
