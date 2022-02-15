@@ -9,8 +9,7 @@ class Solution:
             return head
         z = head
         while head and head.next :
-            temp1,temp2 = head,head.next
-            temp1.val,temp2.val = temp2.val,temp1.val
+            head.val,head.next.val = head.next.val,head.val
             head = head.next.next
         return z
             
