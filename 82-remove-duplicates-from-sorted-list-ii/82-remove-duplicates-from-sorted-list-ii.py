@@ -5,6 +5,23 @@
 #         self.next = next
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        z = head
+        temp1 = defaultdict(int)
+        while z:
+            temp1[z.val]+=1
+            z = z.next
+        curr = ListNode()
+        u,z = curr,head
+        while z :
+            if temp1[z.val]>1 : z = z.next
+            else:
+                curr.next = ListNode(z.val)
+                curr = curr.next
+                z = z.next
+        return u.next
+        
+            
+        '''
         if not head : return head
         z = head
         dict1 = defaultdict(int)
@@ -24,3 +41,4 @@ class Solution:
                 p = p.next
         if dict1[z.val]>1: z = z.next
         return z
+        '''
