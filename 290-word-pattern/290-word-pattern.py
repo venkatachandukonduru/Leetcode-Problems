@@ -1,5 +1,13 @@
 class Solution:
     def wordPattern(self, p: str, s: str) -> bool:
+        #Method 2
+        p = [x for x in p]
+        s = s.split(" ")
+        if len(p)!=len(s) : return False
+        return True if len((set(zip(p,s)))) == min(len(set(p)),len(set(s))) else False
+    
+        '''
+        #Method1
         p = [x for x in p]
         s = s.split(" ")
         if len(p) != len(s) : return False
@@ -13,3 +21,4 @@ class Solution:
             if t in dic1.values() : return False
         print(p,s,dic1)
         return True
+        '''
