@@ -1,15 +1,15 @@
 class Solution:
     def maximumEvenSplit(self, num: int) -> List[int]:
         if num%2 !=0 : return []
-        if num == 2: return [2]
+        #if num == 2: return [2]
         res = []
-        i = 2
+        i = 0
         while num>i:
             res.append(i)
             num-=i
             i+=2
         if res[-1]<num: res.append(num)
         else : res[-1]+=num
-        return res
+        return res[1:]
         
         
