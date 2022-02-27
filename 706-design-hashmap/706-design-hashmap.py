@@ -1,4 +1,18 @@
 class MyHashMap:
+    def __init__(self):
+        self.dict1 = {} 
+    def put(self, key, val):
+        self.dict1[key] = val
+
+    def get(self, key):
+        if key in self.dict1 : return self.dict1[key]
+        else : return -1
+
+    def remove(self, key):
+        if key in self.dict1 : del self.dict1[key]
+        else : return -1
+
+'''class MyHashMap:
 
     def __init__(self):
         """
@@ -29,8 +43,8 @@ class MyHashMap:
         """
         if key in self.hash:
             del self.hash[key]
-
-            '''
+'''
+'''
 # Your MyHashMap object will be instantiated and called as such:
 # obj = MyHashMap()
 # obj.put(key,value)
