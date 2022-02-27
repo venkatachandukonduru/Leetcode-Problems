@@ -3,14 +3,13 @@ class MyHashMap:
         self.dict1 = {} 
     def put(self, key, val):
         self.dict1[key] = val
-
     def get(self, key):
         if key in self.dict1 : return self.dict1[key]
         else : return -1
-
     def remove(self, key):
         if key in self.dict1 : del self.dict1[key]
         else : return -1
+
 
 '''class MyHashMap:
 
