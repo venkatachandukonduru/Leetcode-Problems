@@ -1,3 +1,4 @@
+[Discussion Post (created on 1/2/2022 at 14:49)](https://leetcode.com/problems/counting-bits/discuss/1809279/Pythonic-Solution-or-One-liner)  
 <h2>338. Counting Bits</h2><h3>Easy</h3><hr><div><p>Given an integer <code>n</code>, return <em>an array </em><code>ans</code><em> of length </em><code>n + 1</code><em> such that for each </em><code>i</code><em> </em>(<code>0 &lt;= i &lt;= n</code>)<em>, </em><code>ans[i]</code><em> is the <strong>number of </strong></em><code>1</code><em><strong>'s</strong> in the binary representation of </em><code>i</code>.</p>
 
 <p>&nbsp;</p>
