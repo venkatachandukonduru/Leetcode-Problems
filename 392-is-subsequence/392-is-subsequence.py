@@ -7,5 +7,4 @@ class Solution:
                 i+=1
                 if i==len(s) : return True
             j+=1
-        return True if i==len(s) else False
             
