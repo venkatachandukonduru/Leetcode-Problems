@@ -9,8 +9,8 @@ class Solution:
         res,temp = [],[root]
         while any(temp):
             res = [x.val if x else 'a' for x in temp]
-            temp = list(chain.from_iterable([node.left,node.right] for node in temp if node))
             if res!=res[::-1] : return False
+            temp = list(chain.from_iterable([node.left,node.right] for node in temp if node))
         return True
             
         
