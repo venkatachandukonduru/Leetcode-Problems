@@ -8,6 +8,16 @@ class Node:
 
 class Solution:
     def levelOrder(self, root: 'Node') -> List[List[int]]:
+        temp,res = [root],[]
+        while any(temp):
+            res.append([x.val for x in temp])
+            temp = [child for node in temp for child in node.children if child]
+        return res
+        
+        
+        
+        
+        '''
         nodes = [root,'a']
         if root : res = [root.val,'a']
         else : return []
@@ -31,6 +41,7 @@ class Solution:
                 result.append(temp)
                 temp = []
         return result
+        '''
             
                 
         
