@@ -12,13 +12,15 @@ class Solution:
         def insert(root,val):
             if root is None:
                 return
-            if root.left is None and val<root.val:
-                root.left = TreeNode(val)
-            if root.right is None and val>root.val:
-                root.right = TreeNode(val)
             if val<root.val:
+                if root.left is None:
+                    root.left = TreeNode(val)
+                    return
                 insert(root.left,val)
             else:
+                if root.right is None:
+                    root.right = TreeNode(val)
+                    return
                 insert(root.right,val)
         insert(root,val)
         return temp
