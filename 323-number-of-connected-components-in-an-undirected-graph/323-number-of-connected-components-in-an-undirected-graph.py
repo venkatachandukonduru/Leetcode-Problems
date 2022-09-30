@@ -14,5 +14,5 @@ class Solution:
         for i in edges:
             union(i[0],i[1])
         
-        print(root)
+        #print(root)
         return len(set(root))
