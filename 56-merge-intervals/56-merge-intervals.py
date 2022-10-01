@@ -1,5 +1,7 @@
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        
+        #Making changes in the same array
         intervals.sort()
         i = 1
         while i<len(intervals):
